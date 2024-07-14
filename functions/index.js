@@ -3,8 +3,8 @@ import pkg from 'agora-token';
 
 const { RtcTokenBuilder, RtmTokenBuilder, RtcRole } = pkg;
 
-const AGORA_APP_ID = process.env.AGORA_APP_ID;
-const AGORA_CERTIFICATE = process.env.AGORA_CERTIFICATE;
+const AGORA_APP_ID = functions.config().agora.app.id;
+const AGORA_CERTIFICATE = functions.config().agora.certificate;
 const TOKEN_EXPIRATION_IN_SECONDS = 3600;
 const INVALID_URL_FORMAT_MESSAGE = 'Invalid URL format';
 const INVALID_ENDPOINT_MESSAGE = 'Invalid endpoint';
