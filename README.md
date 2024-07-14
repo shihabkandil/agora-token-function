@@ -36,12 +36,17 @@ Follow these steps to get started with the Firebase Cloud Functions:
     firebase init functions
     ```
 
+    Update Firebase projectId in .firebaserc
+
     This will set up your Firebase project to deploy cloud functions.
 
 4. **Environment Configuration**: Set up your environment variables. You can pass enviroment variables into your deploy command, make sure development account has Cloud Runtime Configuration API enabled. 
     ```bash
-    firebase functions:config:set service.agora_app_id="AGORA_APP_ID"
-    firebase functions:config:set service.app_certificate="AGORA_APP_CERTIFICATE"
+    firebase functions:secrets:set AGORA_APP_ID
+    ```
+
+    ```bash
+    firebase functions:secrets:set AGORA_CERTIFICATE
     ```
 
 5. **Run Cloud Functions Locally**: Start the Firebase emulators to run functions locally.
